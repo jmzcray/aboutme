@@ -13,5 +13,3 @@ maven-eclipse.xml
 # Ignore compilation results
 target/*
 
-# Ignore grunt cache files
-node_modules/grunt-newer/.cache/*
