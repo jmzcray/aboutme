@@ -1,1 +1,17 @@
-node_modules/grunt-newer/.cache/copy/move/timestamp
+# Ignore IDE and Operating System artifacts
+.idea
+.classpath
+.metadata
+.project
+.settings
+maven-eclipse.xml
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Ignore compilation results
+target/*
+
+# Ignore grunt cache files
+node_modules/grunt-newer/.cache/*
