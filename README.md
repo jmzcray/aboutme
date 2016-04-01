@@ -5,7 +5,7 @@ http://jimz.id.au
 * Setup [git-ftp](https://github.com/git-ftp/git-ftp)
 * Setup `git-alias` to use `git-ftp` options of `--remote-root` and `--syncroot`
 
-Sample alias:
+Sample alias in project's local git, `.git/config`:
 ```
     [alias]
       ftp-deploy = ftp push --remote-root <path/on/server> --syncroot <path/in/local/for/deploy>
