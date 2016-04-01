@@ -8,7 +8,7 @@ http://jimz.id.au
 Sample alias:
 ```
     [alias]
-      ftp-deploy = ftp push --remote-root /public_html/aboutme --syncroot dist/
+      ftp-deploy = ftp push --remote-root <path/on/server> --syncroot <path/in/local/for/deploy>
       deploy = "!git checkout $1 ;\
                  git merge develop;\
                  git push origin $1 ;\
