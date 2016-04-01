@@ -1,17 +1,16 @@
 # aboutme
 http://jimz.id.au
 
-##### While coding:
+#### While coding:
 
-`1`. grunt _// triggers the watch task for js check_
+`1`. grunt  _// triggers the watch task for js check_
 
-`2`. git status _// check what files have changed and the current branch (please be **develop**!)_
+`2`. git status  _// check what files have changed and the current branch (please be **develop**!)_
 
-`3`. git push origin **develop** _// keep develop branch up-to-date_
+`3`. git push origin **develop**  _// keep develop branch up-to-date_
 
 
-
-##### After making changes and ready for deployment:
+#### After making changes and ready for deployment:
 
 `1`. grunt build
 
