@@ -23,14 +23,14 @@ Sample alias in project's local git, `.git/config`:
 
 2. `git status`  _// check what files have changed and the current branch (make sure it's **develop**!)_
 
-3. `git push origin develop`  _// keep develop branch up-to-date_
+3. `git commit` then `git push`  _// keep **develop** branch up-to-date_
 
 
 #### After making changes and ready for deployment:
 
 1. `grunt build`
 
-2. `git commit` then `git push origin develop`
+2. `git commit` then `git push` _// updates **develop** branch_
 
-3. `git deploy master`
+3. `git deploy master` _// updates **master** branch and `git-ftp` push to server_
 
