@@ -9,22 +9,28 @@ While coding:
 . git status // check what files have changed and the current branch (please be develop!)
 
 `3`
-. git push origin develop // keep develop branch up-to-date
+. git push origin **develop** // keep develop branch up-to-date
 
 
-After making changes:
+After making changes and ready for deployment:
 `1`
 . grunt build
 
 `2`
-. git checkout master
+. git push origin **develop**
 
 `3`
-. git merge develop
+. git checkout **master**
 
 `4`
-. git push origin master
+. git merge develop
 
 `5`
+. git push origin **master**
+
+`6`
 . git deploy
+
+`7`
+. git checkout **develop**
 
