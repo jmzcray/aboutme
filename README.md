@@ -2,35 +2,27 @@
 http://jimz.id.au
 
 While coding:
-`1`
-. grunt // triggers the watch task for js check
 
-`2`
-. git status // check what files have changed and the current branch (please be develop!)
+`1`. grunt // triggers the watch task for js check
 
-`3`
-. git push origin **develop** // keep develop branch up-to-date
+`2`. git status // check what files have changed and the current branch (please be develop!)
+
+`3`. git push origin **develop** // keep develop branch up-to-date
 
 
 After making changes and ready for deployment:
-`1`
-. grunt build
 
-`2`
-. git push origin **develop**
+`1`. grunt build
 
-`3`
-. git checkout **master**
+`2`. git push origin **develop**
 
-`4`
-. git merge develop
+`3`. git checkout **master**
 
-`5`
-. git push origin **master**
+`4`. git merge develop
 
-`6`
-. git deploy
+`5`. git push origin **master**
 
-`7`
-. git checkout **develop**
+`6`. git deploy
+
+`7`. git checkout **develop**
 
