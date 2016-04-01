@@ -54,7 +54,7 @@ module.exports = function(grunt) {
      }
     },
 
-    imagemin: { 
+    imagemin: {
       dynamic: {
         files: [{
           expand: true,
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
+  // Default and custom task(s).
   grunt.registerTask('build', ['uglify', 'cssmin', 'htmlmin', 'newer:copy:move', 'newer:imagemin:dynamic']);
   grunt.registerTask('default', ['watch:jscheck']);
 
