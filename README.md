@@ -22,7 +22,7 @@ http://jimz.id.au
 
 `5`. git push origin **master**
 
-`6`. git deploy _// setup [git-fpt](https://github.com/git-ftp/git-ftp), use `--remote-root` and `--syncroot`_
+`6`. git deploy _// setup [git-ftp](https://github.com/git-ftp/git-ftp), use `--remote-root` and `--syncroot`_
 
 `7`. git checkout **develop**
 
