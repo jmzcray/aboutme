@@ -13,3 +13,5 @@ maven-eclipse.xml
 # Ignore compilation results
 target/*
 
+# npm packages
+node_modules
