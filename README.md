@@ -1,7 +1,7 @@
 # aboutme
 http://jimz.id.au
 
-source code at `src/`
+source code at `src/` <br />
 compiled code at `dist/`
 
 #### Initial setup
