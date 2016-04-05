@@ -1,6 +1,9 @@
 # aboutme
 http://jimz.id.au
 
+source code at `src/`
+compiled code at `dist/`
+
 #### Initial setup
 * Setup [git-ftp](https://github.com/git-ftp/git-ftp)
 * Setup `git-alias` to use `git-ftp` options of `--remote-root` and `--syncroot`
