@@ -11,7 +11,7 @@ Compiled code at `dist/`
   + `password`
   + `syncroot`
   + `remote-root`
-* Setup `git-alias` see below
+* Setup `git-alias`, see example below.
 
 My alias in project's local git, `.git/config`:
 ```
