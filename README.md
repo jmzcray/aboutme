@@ -1,8 +1,8 @@
 # aboutme
 http://jimz.id.au
 
-source code at `src/` <br />
-compiled code at `dist/`
+Source code at `src/` <br />
+Compiled code at `dist/`
 
 #### Initial setup
 * Setup [git-ftp](https://github.com/git-ftp/git-ftp)
@@ -31,7 +31,7 @@ Sample alias in project's local git, `.git/config`:
 
 #### After making changes and ready for deployment:
 
-1. `grunt build`
+1. `grunt build` _- compile code into `dist/` directory_
 
 2. `git commit` then `git push` _- updates **develop** branch_
 
