@@ -6,12 +6,17 @@ Compiled code at `dist/`
 
 #### Initial setup
 * Setup [git-ftp](https://github.com/git-ftp/git-ftp)
+  + url
+  + user
+  + password
+  + syncroot
+  + remote-root
 * Setup `git-alias` to use `git-ftp` options of `--remote-root` and `--syncroot`
 
 Sample alias in project's local git, `.git/config`:
 ```
     [alias]
-      ftp-deploy = ftp push --remote-root <path/on/server> --syncroot <path/in/local/for/deploy>
+      ftp-deploy = ftp push
       deploy = "!git checkout $1 ;\
                  git merge develop;\
                  git push origin $1 ;\
