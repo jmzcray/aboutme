@@ -203,23 +203,29 @@
 
   var sections = $("section");
   var navigation_links = $("#nav-wrap a");
+  var lastSecTop = sections.last().offset().top;
 
   sections.waypoint({
 
-      handler: function(direction) {
+    handler: function(direction) {
 
-         var active_section;
+      if (lastSecTop !== $(this.group.last().element).offset().top) {
+        lastSecTop = $(this.group.last().element).offset().top;
+        this.context.refresh();
+      }
 
+      var active_section;
       active_section = $('section#' + this.element.id);
+
       if (direction === "up") {active_section = active_section.prev();}
 
       var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
 
-         navigation_links.parent().removeClass("current");
+      navigation_links.parent().removeClass("current");
       active_link.parent().addClass("current");
 
     },
-    offset: '25%'
+    offset: '100%'
 
   });
 
