@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       css: ['css/*.css'],
       js:  ['js/main.js'],
       images: ['images/**/*.{png,jpg,gif}'],
-      copy: ['css/**', '!css/*.css', 'js/**', '!js/main.js', 'fonts/**', 'inc/**', 'favicon.png'],
+      copy: ['css/**', '!css/*.css', 'js/**', '!js/main.js', 'fonts/**', 'inc/**', 'favicon.png', 'sitemap.xml'],
       html: ['index.html']
     },
 
