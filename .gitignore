@@ -9,6 +9,7 @@ maven-eclipse.xml
 *.ipr
 *.iws
 .DS_Store
+.vscode/
 
 # Ignore compilation results
 target/*
