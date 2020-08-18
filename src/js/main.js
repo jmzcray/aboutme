@@ -214,8 +214,7 @@
         this.context.refresh();
       }
 
-      var active_section;
-      active_section = $('section#' + this.element.id);
+      var active_section = $('section#' + this.element.id);
 
       if (direction === "up") {active_section = active_section.prev();}
 
@@ -330,7 +329,7 @@
         if ( !cacheDate || (localStorage.getItem(folioKey) === null) ) {
           $.ajax({
               type: 'GET',
-              url: "https://www.googleapis.com/pagespeedonline/v1/runPagespeed",
+              url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
               data: {
                 url: site,
                   screenshot: true,
@@ -338,12 +337,10 @@
               }
           })
           .done(function(data) {
-              var image = data.screenshot.data,
+              var image = data.lighthouseResult.audits["final-screenshot"].details.data,
                 currentDate;
-              image = image.replace(/_/g, "/");
-              image = image.replace(/-/g, "+");
 
-              $img.attr('src', "data:image/jpeg;base64," + image)
+              $img.attr('src', image)
                 .show();
 
               currentDate = new Date().getTime();
