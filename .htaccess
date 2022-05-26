@@ -2,6 +2,8 @@ DirectoryIndex /aboutme/index.html
 
 RewriteEngine On
 
+RewriteRule ^/$ /aboutme [PT,L]
+
 RewriteCond %{REQUEST_URI} !^/aboutme/
 RewriteRule ^(favicon.*)$ /aboutme/$0
 RewriteRule ^(sitemap.xml)$ /aboutme/$0
