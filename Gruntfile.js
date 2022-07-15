@@ -7,6 +7,8 @@ module.exports = function(grunt) {
       cwd: 'src',
       dest: 'dist',
       css: ['css/*.css'],
+      fontawsomeFonts: 'src/css/font-awesome/fonts',
+      miconsFonts: 'src/css/micons/fonts',
       js:  ['js/main.js'],
       images: ['images/**/*.{png,jpg,gif}'],
       copy: ['css/**', '!css/*.css', 'js/**', '!js/main.js', 'fonts/**', 'inc/**', 'favicon.png', 'sitemap.xml'],
@@ -66,11 +68,23 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      move: {
+      main: {
         expand: true,
         cwd: '<%= files.cwd %>',
         src: '<%= files.copy %>',
-        dest: '<%= files.dest %>',
+        dest: '<%= files.dest %>'
+      },
+      fontawesomeFonts: {
+        expand: true,
+        cwd: '<%= files.fontawsomeFonts %>',
+        src: ['**'],
+        dest: '<%= files.dest %>/fonts'
+      },
+      miconsFonts: {
+        expand: true,
+        cwd: '<%= files.miconsFonts %>',
+        src: ['**'],
+        dest: '<%= files.dest %>/fonts'
       },
     },
 
@@ -119,7 +133,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default and custom task(s).
-  grunt.registerTask('build', ['uglify', 'cssmin', 'htmlmin', 'newer:copy:move', 'newer:imagemin:dynamic']);
+  grunt.registerTask('build', ['uglify', 'cssmin', 'htmlmin', 'newer:copy', 'newer:imagemin:dynamic']);
   grunt.registerTask('default', ['watch:jscheck']);
 
 };
