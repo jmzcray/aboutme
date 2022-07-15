@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       js:  ['js/main.js'],
       images: ['images/**/*.{png,jpg,gif}'],
       copy: ['css/**', '!css/*.css', 'js/**', '!js/main.js', 'fonts/**', 'inc/**', 'favicon.png', 'sitemap.xml'],
-      html: ['index.html']
+      html: ['home.html']
     },
 
     uglify: {
