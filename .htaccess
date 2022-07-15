@@ -1,10 +1,19 @@
-DirectoryIndex /aboutme/index.html
+Options -Indexes
 
 RewriteEngine On
 
-RewriteRule ^/$ /aboutme [PT,L]
+RewriteRule ^aboutme/$ https://jimz.au [R=301,L]
+RewriteRule ^$ /aboutme/home.html [L]
 
 RewriteCond %{REQUEST_URI} !^/aboutme/
-RewriteRule ^(favicon.*)$ /aboutme/$0
-RewriteRule ^(sitemap.xml)$ /aboutme/$0
-RewriteRule ^(?:css|images|js|fonts|inc)/.*$ /aboutme/$0
+## RewriteRule ^(.*)$ /aboutme/$1 [L]
+RewriteRule ^(favicon.png)$ /aboutme/$1 [L]
+RewriteRule ^(sitemap.xml)$ /aboutme/$1 [L]
+RewriteRule ^(css|images|js|fonts|inc)/(.*)$ /aboutme/$1/$2 [L]
+
+RewriteRule ^onceuponautime/$ /onceuponautime/aloha.html [R=301,L]
+RewriteRule ^pokemon-gallery/$ /pokemon-gallery/pokemon.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^jimz\.id\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.jimz\.id\.au$
+RewriteRule ^(.*)$ "https\:\/\/jimz\.au\/$1" [R=301,L]
