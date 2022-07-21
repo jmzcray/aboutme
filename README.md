@@ -1,5 +1,5 @@
 # aboutme
-http://jimz.id.au
+http://jimz.au
 
 Source code at `src/` <br />
 Compiled code at `dist/`
