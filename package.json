@@ -1,9 +1,9 @@
 {
-  "name": "jimz.id.au-aboutme",
+  "name": "jimz.au-aboutme",
   "version": "1.0.0",
-  "description": "Jimz.id.Au build",
+  "description": "Jimz.Au build",
   "main": "Gruntfile.js",
-  "author": "Jimz Au <hello@jimz.id.au> (http://jimz.id.au)",
+  "author": "Jimz Au <hello@jimz.au> (http://jimz.au)",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.5.3",

@@ -1,15 +1,15 @@
 <?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'hello@jimz.id.au';
+$siteOwnersEmail = 'hello@jimz.au';
 
 
 if($_POST) {
 
-   $name = trim(stripslashes($_POST['contactName']));
-   $email = trim(stripslashes($_POST['contactEmail']));
-   $subject = trim(stripslashes($_POST['contactSubject']));
-   $contact_message = trim(stripslashes($_POST['contactMessage']));
+   $name = input_cleaner($_POST['contactName']);
+   $email = input_cleaner($_POST['contactEmail']);
+   $subject = input_cleaner($_POST['contactSubject']);
+   $contact_message = input_cleaner($_POST['contactMessage']);
 
    // Check Name
   if (strlen($name) < 2) {
@@ -64,6 +64,14 @@ if($_POST) {
 
   } # end if - there was a validation error
 
+}
+
+//create our cleaner/validation function
+function input_cleaner($input) {
+  $input = trim($input);
+  $input = stripslashes($input);
+  $input = htmlspecialchars($input);
+  return $input;
 }
 
 ?>
