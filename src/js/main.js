@@ -67,14 +67,7 @@
   /*----------------------------------------------------- */
   /* Skill Bars - translating into number of years exp.
   ------------------------------------------------------- */
-  var skills = $(".skill-bars li .progress span");
-  skills.each(function () {
-    var $skillyear = $(this), $skillTxt = $.trim($skillyear.text()), reg = /year[0-9]{4}/;
-    if ($skillTxt.indexOf("year") > -1 && reg.test($skillTxt)) {
-      var currentYear = new Date().getFullYear();
-      $skillyear.text((currentYear-$skillTxt.substring(4)) + " years");
-    }
-  });
+  // var skills = $(".skill-bars li .progress span");
 
 
   /* Generic get random number */
@@ -290,111 +283,111 @@
   /*---------------------------------------------------- */
   /*  site preview
   ------------------------------------------------------ */
-  $.fn.sitePreview = function() {
-      var portSection = $("#portfolio"),
-            folioItems = this;
-        portSection.waypoint({
-            handler: function(direction) {
-                if (direction === "down") {
-                       initPreview(folioItems);
-                }
-                this.destroy();
-            }, offset: "25%"
-        });
-    };
-
-    function loadPreview(item, view) {
-      var site = item.attr('href'),
-          strategy = (typeof(view) !== "undefined") ? view : "desktop",
-          $img = item.find("img");
-
-        if (strategy === "desktop") {
-          item.removeAttr('data-mobile');
-        } else {
-          item.attr('data-mobile', '');
-        }
-
-        item.siblings('a.site-preview-toggle').toggleClass("disabled");
-        $img.hide();
-        $("<i class='fa fa-spin fa-spinner'></i>").insertBefore($img);
-
-        var cacheDate = (localStorage.getItem("cacheAt") === null) ? null : localStorage.getItem("cacheAt"),
-          rightNow = new Date().getTime(),
-          folioKey = site + '-' + strategy;
-
-        if ((rightNow - cacheDate)/(1000*60*60) > 3) { // cache is more than 3 hours, clear localStorage images
-          localStorage.clear();
-      }
-
-        if ( !cacheDate || (localStorage.getItem(folioKey) === null) ) {
-          $.ajax({
-              type: 'GET',
-              url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
-              data: {
-                url: site,
-                  screenshot: true,
-                  strategy: strategy
-              }
-          })
-          .done(function(data) {
-              var image = data.lighthouseResult.audits["final-screenshot"].details.data,
-                currentDate;
-
-              $img.attr('src', image)
-                .show();
-
-              currentDate = new Date().getTime();
-              localStorage.setItem('cacheAt', currentDate);
-              localStorage.setItem(folioKey, image);
-          })
-          .fail(function(jqXHR) {
-              $img.attr('src', 'images/sample-image.jpg')
-                .show();
-          })
-          .always(function() {
-            item.find('i.fa-spinner').remove();
-            item.siblings('a.site-preview-toggle').toggleClass("disabled");
-          });
-
-      } else {
-
-        var image = localStorage.getItem(folioKey);
-            $img.attr('src', "data:image/jpeg;base64," + image)
-              .show();
-            item.find('i.fa-spinner').remove();
-            item.siblings('a.site-preview-toggle').toggleClass("disabled");
-        }
-    }
-
-    function initPreview(folioItems) {
-      folioItems.each(function() {
-        var $this = $(this),
-          label = $this.find("img").attr('alt');
-        $this.find('.site-preview-label').text(label);
-        loadPreview($this);
-      });
-    }
-
-
-    var toggles = $("#portfolio .site-preview-toggle");
-
-    toggles.each(function() {
-
-       var toggleBtn = $(this),
-         previewLink = toggleBtn.siblings('a');
-
-       toggleBtn.on('click', function(e) {
-         e.preventDefault();
-
-         if (toggleBtn.hasClass('mobile-view')) {
-           loadPreview(previewLink, "desktop");
-         } else {
-           loadPreview(previewLink, "mobile");
-         }
-         toggleBtn.find('span').toggleClass("current-view");
-         toggleBtn.toggleClass('mobile-view');
-       });
-    });
+  // $.fn.sitePreview = function() {
+  //     var portSection = $("#portfolio"),
+  //           folioItems = this;
+  //       portSection.waypoint({
+  //           handler: function(direction) {
+  //               if (direction === "down") {
+  //                      initPreview(folioItems);
+  //               }
+  //               this.destroy();
+  //           }, offset: "25%"
+  //       });
+  //   };
+  //
+  //   function loadPreview(item, view) {
+  //     var site = item.attr('href'),
+  //         strategy = (typeof(view) !== "undefined") ? view : "desktop",
+  //         $img = item.find("img");
+  //
+  //       if (strategy === "desktop") {
+  //         item.removeAttr('data-mobile');
+  //       } else {
+  //         item.attr('data-mobile', '');
+  //       }
+  //
+  //       item.siblings('a.site-preview-toggle').toggleClass("disabled");
+  //       $img.hide();
+  //       $("<i class='fa fa-spin fa-spinner'></i>").insertBefore($img);
+  //
+  //       var cacheDate = (localStorage.getItem("cacheAt") === null) ? null : localStorage.getItem("cacheAt"),
+  //         rightNow = new Date().getTime(),
+  //         folioKey = site + '-' + strategy;
+  //
+  //       if ((rightNow - cacheDate)/(1000*60*60) > 3) { // cache is more than 3 hours, clear localStorage images
+  //         localStorage.clear();
+  //     }
+  //
+  //       if ( !cacheDate || (localStorage.getItem(folioKey) === null) ) {
+  //         $.ajax({
+  //             type: 'GET',
+  //             url: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+  //             data: {
+  //               url: site,
+  //                 screenshot: true,
+  //                 strategy: strategy
+  //             }
+  //         })
+  //         .done(function(data) {
+  //             var image = data.lighthouseResult.audits["final-screenshot"].details.data,
+  //               currentDate;
+  //
+  //             $img.attr('src', image)
+  //               .show();
+  //
+  //             currentDate = new Date().getTime();
+  //             localStorage.setItem('cacheAt', currentDate);
+  //             localStorage.setItem(folioKey, image);
+  //         })
+  //         .fail(function(jqXHR) {
+  //             $img.attr('src', 'images/sample-image.jpg')
+  //               .show();
+  //         })
+  //         .always(function() {
+  //           item.find('i.fa-spinner').remove();
+  //           item.siblings('a.site-preview-toggle').toggleClass("disabled");
+  //         });
+  //
+  //     } else {
+  //
+  //       var image = localStorage.getItem(folioKey);
+  //           $img.attr('src', "data:image/jpeg;base64," + image)
+  //             .show();
+  //           item.find('i.fa-spinner').remove();
+  //           item.siblings('a.site-preview-toggle').toggleClass("disabled");
+  //       }
+  //   }
+  //
+  //   function initPreview(folioItems) {
+  //     folioItems.each(function() {
+  //       var $this = $(this),
+  //         label = $this.find("img").attr('alt');
+  //       $this.find('.site-preview-label').text(label);
+  //       loadPreview($this);
+  //     });
+  //   }
+  //
+  //
+  //   var toggles = $("#portfolio .site-preview-toggle");
+  //
+  //   toggles.each(function() {
+  //
+  //      var toggleBtn = $(this),
+  //        previewLink = toggleBtn.siblings('a');
+  //
+  //      toggleBtn.on('click', function(e) {
+  //        e.preventDefault();
+  //
+  //        if (toggleBtn.hasClass('mobile-view')) {
+  //          loadPreview(previewLink, "desktop");
+  //        } else {
+  //          loadPreview(previewLink, "mobile");
+  //        }
+  //        toggleBtn.find('span').toggleClass("current-view");
+  //        toggleBtn.toggleClass('mobile-view');
+  //      });
+  //   });
 
 
   /*----------------------------------------------------- */
