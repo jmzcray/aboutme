@@ -1617,7 +1617,7 @@ An interdisciplinary degree that involves the analysis, design, and implementati
       <!-- Footer layout -->
       <footer>
         <div class="container footer-content">
-          <p>Rewritten with Lit Stack & Vite &copy; 2026.</p>
+          <p>Rewritten with Lit Stack & Vite &copy;</p>
           <p>Handcrafted by <a href="mailto:hello@jimz.au">Jimz Au</a>. Original design inspiration by <a href="http://www.styleshout.com/" target="_blank" rel="noopener">styleshout</a>.</p>
         </div>
         <button class="go-top ${this.showGoTop?`visible`:``}" @click=${this.scrollToTop} title="Back to Top">
@@ -1625,4 +1625,4 @@ An interdisciplinary degree that involves the analysis, design, and implementati
         </button>
       </footer>
     `}};N([j()],tn.prototype,`activeSection`,void 0),N([j()],tn.prototype,`showGoTop`,void 0),tn=N([A(`resume-app`)],tn);
-//# sourceMappingURL=index-CP584leM.js.map
+//# sourceMappingURL=index-CW1D4AwZ.js.map
