@@ -17,10 +17,10 @@
   },
   {
     "category": "Software Tools & Platforms",
-    "skills": ["JIRA", "Pivotal Cloud Foundry (PCF)", "Apigee", "Git", "Bamboo", "Apache", "Postman", "Insomnia", "Bruno", "Docker", "New Relic"]
+    "skills": ["JIRA", "Pivotal Cloud Foundry (PCF)", "Apigee", "Git", "Bamboo", "Apache", "Postman", "Insomnia", "Bruno", "Docker", "New Relic", "GitLab"]
   },
   {
     "category": "AI Tools",
-    "skills": ["GitHub Copilot", "ChatGPT", "Claude", "Perplexity", "Ollama", "Llama"]
+    "skills": ["GitHub Copilot", "ChatGPT", "Claude", "Gemini", "Antigravity", "Ollama", "LLaMA"]
   }
 ]
