@@ -461,7 +461,11 @@ I'm Jimz Au.
         line-height: 1.1;
         margin: 1.5rem 0;
         letter-spacing: -0.03em;
-        color: var(--text-primary);
+        color: #f9fafb;
+      }
+
+      .markdown-content p {
+        color: #f9fafb;
       }
 
       @media (min-width: 768px) {
@@ -1625,4 +1629,4 @@ An interdisciplinary degree that involves the analysis, design, and implementati
         </button>
       </footer>
     `}};N([j()],tn.prototype,`activeSection`,void 0),N([j()],tn.prototype,`showGoTop`,void 0),tn=N([A(`resume-app`)],tn);
-//# sourceMappingURL=index-HUpX5BJU.js.map
+//# sourceMappingURL=index-DgIDZef4.js.map
