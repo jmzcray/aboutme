@@ -1,23 +1,11 @@
 # aboutme
-http://jimz.au
+https://jimz.au
 
 Source code at `src/` <br />
 Compiled code at `dist/`
 
 #### Hosting
 This site is deployed with GitHub Pages from the `master` branch via GitHub Actions.
-
-Custom domain:
-
-* `jimz.au`
-
-Required DNS records:
-
-* `A 185.199.108.153`
-* `A 185.199.109.153`
-* `A 185.199.110.153`
-* `A 185.199.111.153`
-* `CNAME www -> jmzcray.github.io`
 
 #### While coding:
 
