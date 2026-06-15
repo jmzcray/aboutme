@@ -30,7 +30,7 @@ export class IntroSection extends LitElement {
         overflow: hidden;
         background:
           linear-gradient(rgba(10, 15, 28, 0.68), rgba(10, 15, 28, 0.72)),
-          url('/images/intro-bg.jpg') no-repeat center center;
+          url('images/intro-bg.jpg') no-repeat center center;
         background-size: cover;
       }
 
