@@ -10,6 +10,10 @@ import contactData from '../content/contact.json';
 export class IntroSection extends LitElement {
   @state() private parsedHtml = '';
 
+  private applySharedMarkdownClasses(markup: string) {
+    return markup.replace('<p>', '<p class="section-subtitle">');
+  }
+
   private handleNavigate(e: Event, targetId: string) {
     e.preventDefault();
     this.dispatchEvent(new CustomEvent('nav-navigate', {
@@ -100,17 +104,6 @@ export class IntroSection extends LitElement {
         margin: 1.5rem 0;
         letter-spacing: -0.03em;
         color: #f9fafb;
-      }
-
-      .markdown-content p {
-        font-family: var(--font-heading);
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--accent);
-        margin-bottom: 0.75rem;
-        display: block;
       }
 
       @media (min-width: 768px) {
@@ -217,7 +210,7 @@ export class IntroSection extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this.parsedHtml = marked.parse(introMd) as string;
+    this.parsedHtml = this.applySharedMarkdownClasses(marked.parse(introMd) as string);
   }
 
   render() {
