@@ -393,7 +393,7 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
 - Senior Software Engineer
 - DevOps
 - Team Lead
-`,$={email:`hello@jimz.au`,linkedin:`https://www.linkedin.com/in/jimzau`,github:`https://github.com/jmzcray`,cvWord:`https://drive.google.com/open?id=0B-vmjnGH79fONEZYVFpHQVRRa00`,cvPdf:`https://drive.google.com/open?id=0B-vmjnGH79fOeUFKbEpnVmxpNWM`,profilePic:`images/profile-pic.jpg`},Kt=class extends k{constructor(...e){super(...e),this.parsedHtml=``}handleNavigate(e,t){e.preventDefault(),this.dispatchEvent(new CustomEvent(`nav-navigate`,{detail:{targetId:t},bubbles:!0,composed:!0}))}static{this.styles=[o`${a(M)}`,o`
+`,$={email:`hello@jimz.au`,linkedin:`https://www.linkedin.com/in/jimzau`,github:`https://github.com/jmzcray`,cvWord:`https://drive.google.com/open?id=0B-vmjnGH79fONEZYVFpHQVRRa00`,cvPdf:`https://drive.google.com/open?id=0B-vmjnGH79fOeUFKbEpnVmxpNWM`,profilePic:`images/profile-pic.jpg`},Kt=class extends k{constructor(...e){super(...e),this.parsedHtml=``}applySharedMarkdownClasses(e){return e.replace(`<p>`,`<p class="section-subtitle">`)}handleNavigate(e,t){e.preventDefault(),this.dispatchEvent(new CustomEvent(`nav-navigate`,{detail:{targetId:t},bubbles:!0,composed:!0}))}static{this.styles=[o`${a(M)}`,o`
       :host {
         display: block;
         min-height: 100vh;
@@ -472,17 +472,6 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
         margin: 1.5rem 0;
         letter-spacing: -0.03em;
         color: #f9fafb;
-      }
-
-      .markdown-content p {
-        font-family: var(--font-heading);
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--accent);
-        margin-bottom: 0.75rem;
-        display: block;
       }
 
       @media (min-width: 768px) {
@@ -584,7 +573,7 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
           transform: translateY(0);
         }
       }
-    `]}connectedCallback(){super.connectedCallback(),this.parsedHtml=Q.parse(Gt)}render(){return C`
+    `]}connectedCallback(){super.connectedCallback(),this.parsedHtml=this.applySharedMarkdownClasses(Q.parse(Gt))}render(){return C`
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
       <div class="glow-blob glow-blob-1"></div>
       <div class="glow-blob glow-blob-2"></div>
@@ -1654,4 +1643,4 @@ An interdisciplinary degree that involves the analysis, design, and implementati
         </button>
       </footer>
     `}};N([j()],tn.prototype,`activeSection`,void 0),N([j()],tn.prototype,`showGoTop`,void 0),tn=N([A(`resume-app`)],tn);
-//# sourceMappingURL=index-CDTHgem9.js.map
+//# sourceMappingURL=index-Dho_KAOF.js.map
