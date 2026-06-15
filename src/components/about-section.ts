@@ -240,20 +240,6 @@ export class AboutSection extends LitElement {
               <div class="profile-text">
                 ${unsafeHTML(this.profileHtml)}
                 
-                <ul>
-                  <li>
-                    <strong>Full Name:</strong>
-                    <span>James Au</span>
-                  </li>
-                  <li>
-                    <strong>Role:</strong>
-                    <span>Senior Software Engineer</span>
-                  </li>
-                  <li>
-                    <strong>Email:</strong>
-                    <span><a href="mailto:${contactData.email}">${contactData.email}</a></span>
-                  </li>
-                </ul>
               </div>
 
               <div class="buttons-section">
