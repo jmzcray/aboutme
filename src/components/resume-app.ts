@@ -167,7 +167,7 @@ export class ResumeApp extends LitElement {
       <!-- Main Body sections -->
       <main>
         <div id="intro" class="spy-target">
-          <intro-section></intro-section>
+          <intro-section @nav-navigate=${this.handleNavigation}></intro-section>
         </div>
         
         <div id="about" class="spy-target">

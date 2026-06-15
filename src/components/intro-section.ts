@@ -10,6 +10,15 @@ import contactData from '../content/contact.json';
 export class IntroSection extends LitElement {
   @state() private parsedHtml = '';
 
+  private handleNavigate(e: Event, targetId: string) {
+    e.preventDefault();
+    this.dispatchEvent(new CustomEvent('nav-navigate', {
+      detail: { targetId },
+      bubbles: true,
+      composed: true
+    }));
+  }
+
   static styles = [
     css`${unsafeCSS(sharedStyles)}`,
     css`
@@ -19,6 +28,10 @@ export class IntroSection extends LitElement {
         width: 100%;
         position: relative;
         overflow: hidden;
+        background:
+          linear-gradient(rgba(10, 15, 28, 0.68), rgba(10, 15, 28, 0.72)),
+          url('/images/intro-bg.jpg') no-repeat center center;
+        background-size: cover;
       }
 
       .intro-container {
@@ -218,7 +231,7 @@ export class IntroSection extends LitElement {
           </div>
 
           <div class="actions">
-            <a href="#about" class="btn btn-primary">
+            <a href="#about" class="btn btn-primary" @click=${(e: Event) => this.handleNavigate(e, 'about')}>
               More About Me <i class="fa-solid fa-arrow-down"></i>
             </a>
           </div>
