@@ -16,6 +16,14 @@ export class ContactSection extends LitElement {
         gap: 1.5rem;
         max-width: 900px;
         margin: 3rem auto 0 auto;
+        align-items: stretch;
+      }
+
+      @media (max-width: 767px) {
+        .contact-grid {
+          gap: 1rem;
+          margin-top: 2rem;
+        }
       }
 
       @media (min-width: 768px) {
@@ -33,6 +41,13 @@ export class ContactSection extends LitElement {
         height: 100%;
         position: relative;
         overflow: hidden;
+      }
+
+      @media (max-width: 767px) {
+        .contact-card {
+          padding: 1.75rem 1.25rem;
+          border-radius: 18px;
+        }
       }
 
       .contact-icon {
@@ -70,7 +85,9 @@ export class ContactSection extends LitElement {
         font-size: 0.95rem;
         color: var(--text-secondary);
         margin-bottom: 1.5rem;
-        word-break: break-all;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        line-height: 1.6;
       }
 
       .contact-btn {
@@ -78,6 +95,13 @@ export class ContactSection extends LitElement {
         width: 100%;
         font-size: 0.85rem;
         padding: 0.6rem 1.2rem;
+        min-height: 48px;
+      }
+
+      @media (max-width: 767px) {
+        .contact-btn {
+          font-size: 0.9rem;
+        }
       }
 
       /* Glowing background border effect */
