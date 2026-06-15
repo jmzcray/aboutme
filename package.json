@@ -1,20 +1,21 @@
 {
   "name": "jimz.au-aboutme",
   "version": "1.0.0",
-  "description": "Jimz.Au build",
-  "main": "Gruntfile.js",
+  "description": "Jimz.Au resume built with Lit Web Components and Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
   "author": "Jimz Au <hello@jimz.au> (http://jimz.au)",
   "license": "ISC",
+  "dependencies": {
+    "lit": "^3.1.2",
+    "marked": "^12.0.1"
+  },
   "devDependencies": {
-    "grunt": "^1.5.3",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-contrib-jshint": "^3.2.0",
-    "grunt-contrib-uglify": "^5.2.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-dev-update": "^2.3.0",
-    "grunt-newer": "^1.1.2"
+    "typescript": "^5.3.3",
+    "vite": "^8.0.16"
   }
 }

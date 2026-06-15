@@ -1,0 +1,44 @@
+[
+  {
+    "id": "projects",
+    "icon": "pencil-ruler",
+    "count": 64,
+    "suffix": "",
+    "title": "Projects Completed"
+  },
+  {
+    "id": "contacts",
+    "icon": "users",
+    "count": 280,
+    "suffix": "+",
+    "title": "Professional Contacts"
+  },
+  {
+    "id": "awards",
+    "icon": "badge",
+    "count": 8,
+    "suffix": "",
+    "title": "Awards Received"
+  },
+  {
+    "id": "ideas",
+    "icon": "light-bulb",
+    "count": 42,
+    "suffix": "",
+    "title": "Crazy Ideas"
+  },
+  {
+    "id": "coffee",
+    "icon": "cup",
+    "count": 1850,
+    "suffix": "",
+    "title": "Coffee Cups"
+  },
+  {
+    "id": "hours",
+    "icon": "clock",
+    "count": 9200,
+    "suffix": "+",
+    "title": "Hours Worked"
+  }
+]
