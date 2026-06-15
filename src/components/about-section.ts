@@ -12,6 +12,15 @@ export class AboutSection extends LitElement {
   @state() private introHtml = '';
   @state() private profileHtml = '';
 
+  private handleNavigate(e: Event, targetId: string) {
+    e.preventDefault();
+    this.dispatchEvent(new CustomEvent('nav-navigate', {
+      detail: { targetId },
+      bubbles: true,
+      composed: true
+    }));
+  }
+
   static styles = [
     css`${unsafeCSS(sharedStyles)}`,
     css`
@@ -248,7 +257,7 @@ export class AboutSection extends LitElement {
               </div>
 
               <div class="buttons-section">
-                <a href="#contact" class="btn btn-stroke">
+                <a href="#contact" class="btn btn-stroke" @click=${(e: Event) => this.handleNavigate(e, 'contact')}>
                   <i class="fa-regular fa-envelope"></i> Contact Me
                 </a>
                 <a href="${contactData.cvWord}" class="btn btn-primary" target="_blank" rel="noopener">
