@@ -5,6 +5,6 @@ A results-driven, versatile Senior Software Engineer with multiple years of expe
 Motivated to learn and enjoy working with technologies.
 Adapts to new technologies quickly with proven track record to apply newly gained skills to deliver technical tasks and solving complex application problems.
 
-- **Fullname:** James Au
+- **Full Name:** James Au
 - **Role:** Senior Software Engineer
 - **Email:** hello@jimz.au

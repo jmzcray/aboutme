@@ -103,7 +103,14 @@ export class IntroSection extends LitElement {
       }
 
       .markdown-content p {
-        color: #f9fafb;
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: block;
       }
 
       @media (min-width: 768px) {

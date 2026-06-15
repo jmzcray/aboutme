@@ -475,7 +475,14 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
       }
 
       .markdown-content p {
-        color: #f9fafb;
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: block;
       }
 
       @media (min-width: 768px) {
@@ -611,7 +618,7 @@ A results-driven, versatile Senior Software Engineer with multiple years of expe
 Motivated to learn and enjoy working with technologies.
 Adapts to new technologies quickly with proven track record to apply newly gained skills to deliver technical tasks and solving complex application problems.
 
-- **Fullname:** James Au
+- **Full Name:** James Au
 - **Role:** Senior Software Engineer
 - **Email:** hello@jimz.au
 `,Jt=[{category:`Cloud Platforms`,skills:[`Amazon Web Services (AWS)`,`Azure`]},{category:`Languages & Programming`,skills:[`Java`,`OSGi`,`HTML`,`JavaScript`,`TypeScript`,`NodeJS`,`CSS`,`XML / XSLT`,`Shell Script`,`Ansible`,`Terraform`]},{category:`CMS Platforms`,skills:[`Adobe Experience Manager (AEM)`]},{category:`Operating Systems`,skills:[`Microsoft Windows`,`macOS`,`Linux`,`Unix`]},{category:`Software Tools & Platforms`,skills:[`JIRA`,`Pivotal Cloud Foundry (PCF)`,`Apigee`,`Git`,`Bamboo`,`Apache`,`Postman`,`Insomnia`,`Bruno`,`Docker`,`New Relic`,`GitLab`]},{category:`AI Tools`,skills:[`GitHub Copilot`,`ChatGPT`,`Claude`,`Gemini`,`Antigravity`,`Ollama`,`LLaMA`]}],Yt=class extends k{constructor(...e){super(...e),this.introHtml=``,this.profileHtml=``}handleNavigate(e,t){e.preventDefault(),this.dispatchEvent(new CustomEvent(`nav-navigate`,{detail:{targetId:t},bubbles:!0,composed:!0}))}static{this.styles=[o`${a(M)}`,o`
@@ -800,20 +807,6 @@ Adapts to new technologies quickly with proven track record to apply newly gaine
               <div class="profile-text">
                 ${F(this.profileHtml)}
                 
-                <ul>
-                  <li>
-                    <strong>Full Name:</strong>
-                    <span>James Au</span>
-                  </li>
-                  <li>
-                    <strong>Role:</strong>
-                    <span>Senior Software Engineer</span>
-                  </li>
-                  <li>
-                    <strong>Email:</strong>
-                    <span><a href="mailto:${$.email}">${$.email}</a></span>
-                  </li>
-                </ul>
               </div>
 
               <div class="buttons-section">
@@ -1661,4 +1654,4 @@ An interdisciplinary degree that involves the analysis, design, and implementati
         </button>
       </footer>
     `}};N([j()],tn.prototype,`activeSection`,void 0),N([j()],tn.prototype,`showGoTop`,void 0),tn=N([A(`resume-app`)],tn);
-//# sourceMappingURL=index-DH2DvFjd.js.map
+//# sourceMappingURL=index-CDTHgem9.js.map
