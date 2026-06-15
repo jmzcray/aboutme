@@ -27,7 +27,7 @@ My alias in project's local git, `.git/config`:
 
 #### While coding:
 
-1. `grunt`  _- triggers the watch task for js check_
+1. `npm run dev`  _- triggers the watch task for js check_
 
 2. `git status`  _- check what files have changed and the current branch (make sure it's **develop**!)_
 
@@ -36,7 +36,7 @@ My alias in project's local git, `.git/config`:
 
 #### After making changes and ready for deployment:
 
-1. `grunt build` _- compile code into `dist/` directory_
+1. `npm run build` _- compile code into `dist/` directory_
 
 2. `git commit` then `git push` _- updates **develop** branch_
 

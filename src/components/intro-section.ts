@@ -99,7 +99,11 @@ export class IntroSection extends LitElement {
         line-height: 1.1;
         margin: 1.5rem 0;
         letter-spacing: -0.03em;
-        color: var(--text-primary);
+        color: #f9fafb;
+      }
+
+      .markdown-content p {
+        color: #f9fafb;
       }
 
       @media (min-width: 768px) {
