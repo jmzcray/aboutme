@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Cloud Platforms",
+    "skills": ["Amazon Web Services (AWS)", "Azure"]
+  },
+  {
+    "category": "Languages & Programming",
+    "skills": ["Java", "OSGi", "HTML", "JavaScript", "TypeScript", "NodeJS", "CSS", "XML / XSLT", "Shell Script", "Ansible", "Terraform"]
+  },
+  {
+    "category": "CMS Platforms",
+    "skills": ["Adobe Experience Manager (AEM)"]
+  },
+  {
+    "category": "Operating Systems",
+    "skills": ["Microsoft Windows", "macOS", "Linux", "Unix"]
+  },
+  {
+    "category": "Software Tools & Platforms",
+    "skills": ["JIRA", "Pivotal Cloud Foundry (PCF)", "Apigee", "Git", "Bamboo", "Apache", "Postman", "Insomnia", "Bruno", "Docker", "New Relic"]
+  },
+  {
+    "category": "AI Tools",
+    "skills": ["GitHub Copilot", "ChatGPT", "Claude", "Perplexity", "Ollama", "Llama"]
+  }
+]
