@@ -171,7 +171,7 @@ export class ResumeApp extends LitElement {
         </div>
         
         <div id="about" class="spy-target">
-          <about-section></about-section>
+          <about-section @nav-navigate=${this.handleNavigation}></about-section>
         </div>
         
         <div id="resume" class="spy-target">
