@@ -4,26 +4,20 @@ http://jimz.au
 Source code at `src/` <br />
 Compiled code at `dist/`
 
-#### Initial setup
-* Setup [git-ftp](https://github.com/git-ftp/git-ftp)
-  + `url`
-  + `user`
-  + `password`
-  + `syncroot`
-  + `remote-root`
-* Setup `git-alias`, see example below.
+#### Hosting
+This site is deployed with GitHub Pages from the `master` branch via GitHub Actions.
 
-My alias in project's local git, `.git/config`:
-```
-    [alias]
-      ftp-deploy = ftp push
-      deploy = "!git checkout $1 ;\
-                 git merge develop;\
-                 git push origin $1 ;\
-                 git ftp-deploy;\
-                 git checkout develop;\
-                 :"
-```
+Custom domain:
+
+* `jimz.au`
+
+Required DNS records:
+
+* `A 185.199.108.153`
+* `A 185.199.109.153`
+* `A 185.199.110.153`
+* `A 185.199.111.153`
+* `CNAME www -> jmzcray.github.io`
 
 #### While coding:
 
@@ -40,5 +34,7 @@ My alias in project's local git, `.git/config`:
 
 2. `git commit` then `git push` _- updates **develop** branch_
 
-3. `git deploy master` _- updates **master** branch and `git-ftp` push to server_
+3. Merge `develop` into **master** and push `master`
+
+4. GitHub Actions deploys the site to GitHub Pages automatically
 
