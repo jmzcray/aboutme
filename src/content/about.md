@@ -1,5 +1,3 @@
-# Let me introduce myself.
-
 I'm a Sydney based **Senior Software Engineer** with **DevOps** experience specialising in **Adobe Experience Manager (AEM)** and **Amazon Web Services (AWS)**.
 
 ### Profile
