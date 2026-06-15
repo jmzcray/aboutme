@@ -383,7 +383,7 @@ I'm Jimz Au.
 - Senior Software Engineer
 - DevOps
 - Team Lead
-`,$={email:`hello@jimz.au`,linkedin:`https://www.linkedin.com/in/jimzau`,github:`https://github.com/jmzcray`,cvWord:`https://drive.google.com/open?id=0B-vmjnGH79fONEZYVFpHQVRRa00`,cvPdf:`https://drive.google.com/open?id=0B-vmjnGH79fOeUFKbEpnVmxpNWM`,profilePic:`/images/profile-pic.jpg`},Kt=class extends k{constructor(...e){super(...e),this.parsedHtml=``}handleNavigate(e,t){e.preventDefault(),this.dispatchEvent(new CustomEvent(`nav-navigate`,{detail:{targetId:t},bubbles:!0,composed:!0}))}static{this.styles=[o`${a(M)}`,o`
+`,$={email:`hello@jimz.au`,linkedin:`https://www.linkedin.com/in/jimzau`,github:`https://github.com/jmzcray`,cvWord:`https://drive.google.com/open?id=0B-vmjnGH79fONEZYVFpHQVRRa00`,cvPdf:`https://drive.google.com/open?id=0B-vmjnGH79fOeUFKbEpnVmxpNWM`,profilePic:`images/profile-pic.jpg`},Kt=class extends k{constructor(...e){super(...e),this.parsedHtml=``}handleNavigate(e,t){e.preventDefault(),this.dispatchEvent(new CustomEvent(`nav-navigate`,{detail:{targetId:t},bubbles:!0,composed:!0}))}static{this.styles=[o`${a(M)}`,o`
       :host {
         display: block;
         min-height: 100vh;
@@ -392,7 +392,7 @@ I'm Jimz Au.
         overflow: hidden;
         background:
           linear-gradient(rgba(10, 15, 28, 0.68), rgba(10, 15, 28, 0.72)),
-          url('/images/intro-bg.jpg') no-repeat center center;
+          url('images/intro-bg.jpg') no-repeat center center;
         background-size: cover;
       }
 
@@ -1625,4 +1625,4 @@ An interdisciplinary degree that involves the analysis, design, and implementati
         </button>
       </footer>
     `}};N([j()],tn.prototype,`activeSection`,void 0),N([j()],tn.prototype,`showGoTop`,void 0),tn=N([A(`resume-app`)],tn);
-//# sourceMappingURL=index-BnDzUgIz.js.map
+//# sourceMappingURL=index-CP584leM.js.map
