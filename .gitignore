@@ -4,7 +4,7 @@
 .metadata
 .project
 .settings
-.dist
+dist
 maven-eclipse.xml
 *.iml
 *.ipr
