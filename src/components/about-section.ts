@@ -216,9 +216,6 @@ export class AboutSection extends LitElement {
           <div class="section-intro">
             <span class="section-subtitle">About</span>
             <h2 class="section-title">Let me introduce myself.</h2>
-            <div class="section-desc">
-              ${unsafeHTML(this.introHtml)}
-            </div>
           </div>
 
           <div class="about-grid">
